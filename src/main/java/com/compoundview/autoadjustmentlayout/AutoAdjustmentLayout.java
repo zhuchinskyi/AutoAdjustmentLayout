@@ -1,10 +1,12 @@
 package com.compoundview.autoadjustmentlayout;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -49,23 +51,32 @@ public class AutoAdjustmentLayout extends LinearLayout {
      * Set orientation, etc.
      *
      * @param context the current mContext for the view.
+     *
+     * @ Calculating height & width of parent layout, then building view.
+     * @ Removing on globalLayoutListener after
      */
     private void initializeViews(Context context) {
         setOrientation(VERTICAL);
         this.mContext = context;
-    }
 
+        getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @SuppressLint("NewApi")
+            @SuppressWarnings("deprecation")
+            @Override
+            public void onGlobalLayout() {
+                Log.i(TAG, "onGlobalLayout");
 
-    @Override
-    public void onWindowFocusChanged(boolean hasWindowFocus) {
-        super.onWindowFocusChanged(hasWindowFocus);
-        Log.i(TAG, "onWindowFocusChanged");
+                updateSizeInfo();
 
-        updateSizeInfo();
+                if (mElementList != null)
+                    buildView(mElementList);
 
-        if (mElementList != null)
-            buildView(mElementList);
-
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN)
+                    getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                else
+                    getViewTreeObserver().removeGlobalOnLayoutListener(this);
+            }
+        });
 
     }
 

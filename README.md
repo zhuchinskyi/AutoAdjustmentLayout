@@ -3,7 +3,8 @@ Pre Alpha.
 Android Compound View. 
 Simple layout which takes Objects of View type and adjusts them according to width of item and parent layout, line by line.
 Features:
-- add item(s) dynamically
+---
+- set/add item(s)
 - remove item dynamically
 - receive callbacks (item has been removed & end achived)
 

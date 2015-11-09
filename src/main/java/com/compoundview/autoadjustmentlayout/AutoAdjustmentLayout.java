@@ -93,7 +93,7 @@ public class AutoAdjustmentLayout extends LinearLayout {
         for (int i = 0; i < items.size(); i++) {
             TextView textView = (TextView) items.get(i);
 
-            if(mIsRemovable){
+            if (mIsRemovable) {
                 textView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -153,6 +153,23 @@ public class AutoAdjustmentLayout extends LinearLayout {
             mElementList.add(element);
             buildView(mElementList);
         }
+    }
+
+    /**
+     * @param element Singe Object that will be added to the end.
+     * @return true if item has been removed, false otherwise
+     * @throws NullPointerException if you pass null object
+     */
+    public boolean removeElement(Object element) throws NullPointerException {
+        if (element != null) {
+            if (mElementList.remove(element)) {
+                buildView(mElementList);
+                return true;
+            }
+        } else {
+            throw new NullPointerException("Null object not allowed");
+        }
+        return false;
     }
 
     /**

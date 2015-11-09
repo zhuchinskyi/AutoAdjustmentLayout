@@ -1,6 +1,6 @@
 # AutoAdjustmentLayout (Alpha)
 
-Android Custom View. Allow to set List of Objects (extends of View) that will be placed one-by-one before the transfer to next line, depending on item and parent layout width.
+Android Custom View. Allow to set List of Objects (extends of View) that will be placed one-by-one whith auto transfering to the next line, according to items and parent layout width.
 
 ![alt tag](https://raw.github.com/zhuchinskyi/AutoAdjustmentLayout/master/smart_screen.png)
 

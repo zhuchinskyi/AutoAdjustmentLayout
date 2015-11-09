@@ -30,5 +30,5 @@ autoAdjustmentView.setAutoAdjustmentLayoutListener(new AutoAdjustmentLayout.IOnA
   
   ```java
 autoAdjustmentView.addElement(getTextView(156, new Random(), 2));
-autoAdjustmentView.addElements(getRandomItems(20));
+autoAdjustmentView.addElementList(getRandomItems(20));
  ```

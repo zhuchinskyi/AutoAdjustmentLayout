@@ -18,12 +18,11 @@ autoAdjustmentView.isRemovable(true);
 
 autoAdjustmentView.setAutoAdjustmentLayoutListener(new AutoAdjustmentLayout.IOnAutoAdjustmentLayoutListener() {
           @Override
-          public void onLastItemRemoved(View view) {
+          public void onItemRemoved(View view) {
           
           }
-          
           @Override
-          public void onItemRemoved(View view) {
+          public void onLastItemRemoved(View view) {
           
           }
         });

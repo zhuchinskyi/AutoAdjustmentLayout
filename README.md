@@ -2,7 +2,7 @@
 Pre Alpha.
 Android Compound View. Simple layout which takes Objects and  adjusts them according to width of item and parent layout line by line.
 
-#H1Usage:#H1
+Usage:H1
 
 AutoAdjustmentLayout autoAdjustmentView = (AutoAdjustmentLayout) findViewById(R.id.autoAdjustmentView);
 autoAdjustmentView.setElementList(getRandomItems(20));

@@ -1,7 +1,7 @@
 # AutoAdjustmentLayout
 Pre Alpha.
 Android Compound View. 
-Simple layout which takes Objects and adjusts them according to width of item and parent layout line by line.
+Simple layout which takes Objects of View type and adjusts them according to width of item and parent layout line by line.
 You have the ability to remove items by click.
 
 Usage:
@@ -24,11 +24,10 @@ autoAdjustmentView.setAutoAdjustmentLayoutListener(new AutoAdjustmentLayout.IOnA
         });
   }
   ```
-  You can pass any View type object.
-  
-  getRandomItems(20)
   
   To append items dynamically:
+  ---
+  
   ```java
 autoAdjustmentView.addElement(getTextView(156, new Random(), 2));
 autoAdjustmentView.addElements(getRandomItems(20));

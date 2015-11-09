@@ -2,6 +2,9 @@
 Alpha.
 Android Custom View. 
 Simple layout which takes Objects of View type and adjusts them according to width of item and parent layout, line by line.
+
+![alt tag](https://raw.github.com/zhuchinskyi/AutoAdjustmentLayout/master/screen.png)
+
 Features:
 ---
 - set/add item(s)

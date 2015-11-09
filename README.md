@@ -10,7 +10,8 @@ Usage:
 ```java
 AutoAdjustmentLayout autoAdjustmentView = (AutoAdjustmentLayout) findViewById(R.id.autoAdjustmentView);
 autoAdjustmentView.setElementList(getRandomItems(20));
-  
+autoAdjustmentView.isRemovable(true);
+
 autoAdjustmentView.setAutoAdjustmentLayoutListener(new AutoAdjustmentLayout.IOnAutoAdjustmentLayoutListener() {
           @Override
           public void onLastItemRemoved(View view) {

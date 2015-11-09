@@ -26,7 +26,6 @@ autoAdjustmentView.setAutoAdjustmentLayoutListener(new AutoAdjustmentLayout.IOnA
   ```
   
   To append items dynamically:
-  ---
   
   ```java
 autoAdjustmentView.addElement(getTextView(156, new Random(), 2));

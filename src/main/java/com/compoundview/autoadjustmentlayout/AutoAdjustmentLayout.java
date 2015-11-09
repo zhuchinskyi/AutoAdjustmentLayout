@@ -194,14 +194,11 @@ public class AutoAdjustmentLayout extends LinearLayout {
         return mElementList;
     }
 
-
-    @NonNull
-    private LinearLayout getLinearLayout() {
-        LinearLayout tmpLayout = new LinearLayout(mContext);
-        tmpLayout.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-        tmpLayout.setOrientation(LinearLayout.HORIZONTAL);
-        tmpLayout.setId(new Random().nextInt());
-        return tmpLayout;
+    /**
+     * @param isRemovable detect if elements are removable onClick. Default false.
+     */
+    public void isRemovable(boolean isRemovable) {
+        this.mIsRemovable = isRemovable;
     }
 
 
@@ -221,10 +218,12 @@ public class AutoAdjustmentLayout extends LinearLayout {
         this.mAutoAdjustmentLayoutListener = autoAdjustmentLayoutListener;
     }
 
-    /**
-     * @param isRemovable detect if elements are removable onClick. Default false.
-     */
-    public void isRemovable(boolean isRemovable) {
-        this.mIsRemovable = isRemovable;
+    @NonNull
+    private LinearLayout getLinearLayout() {
+        LinearLayout tmpLayout = new LinearLayout(mContext);
+        tmpLayout.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        tmpLayout.setOrientation(LinearLayout.HORIZONTAL);
+        tmpLayout.setId(new Random().nextInt());
+        return tmpLayout;
     }
 }

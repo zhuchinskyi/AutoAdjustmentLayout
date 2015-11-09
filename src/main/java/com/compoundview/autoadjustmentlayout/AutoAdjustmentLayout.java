@@ -29,6 +29,8 @@ public class AutoAdjustmentLayout extends LinearLayout {
 
     ArrayList<Object> mElementList;
 
+    boolean mIsRemovable = false;
+
     private IOnAutoAdjustmentLayoutListener mAutoAdjustmentLayoutListener;
 
 
@@ -90,24 +92,26 @@ public class AutoAdjustmentLayout extends LinearLayout {
 
         for (int i = 0; i < items.size(); i++) {
             TextView textView = (TextView) items.get(i);
-            textView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    ArrayList newArrayList = (ArrayList) items.clone();
 
-                    newArrayList.remove(v);
+            if(mIsRemovable){
+                textView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        ArrayList newArrayList = (ArrayList) items.clone();
 
-                    if (newArrayList.size() > 0){
-                        mAutoAdjustmentLayoutListener.onItemRemoved(v);
-                    }else{
-                        mAutoAdjustmentLayoutListener.onLastItemRemoved(v);
+                        newArrayList.remove(v);
+
+                        if (newArrayList.size() > 0) {
+                            mAutoAdjustmentLayoutListener.onItemRemoved(v);
+                        } else {
+                            mAutoAdjustmentLayoutListener.onLastItemRemoved(v);
+                        }
+
+                        buildView(newArrayList);
+
                     }
-
-                    buildView(newArrayList);
-
-
-                }
-            });
+                });
+            }
 
             textView.measure(0, 0);       //must call measure!
             int currTvWidth = textView.getMeasuredWidth();  //get mHeight
@@ -198,5 +202,12 @@ public class AutoAdjustmentLayout extends LinearLayout {
 
     public void setAutoAdjustmentLayoutListener(IOnAutoAdjustmentLayoutListener autoAdjustmentLayoutListener) {
         this.mAutoAdjustmentLayoutListener = autoAdjustmentLayoutListener;
+    }
+
+    /**
+     * @param isRemovable detect if elements are removable onClick. Default false.
+     */
+    public void isRemovable(boolean isRemovable) {
+        this.mIsRemovable = isRemovable;
     }
 }

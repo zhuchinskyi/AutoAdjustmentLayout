@@ -9,7 +9,7 @@ Usage:
 
 ```java
 AutoAdjustmentLayout autoAdjustmentView = (AutoAdjustmentLayout) findViewById(R.id.autoAdjustmentView);
-autoAdjustmentView.setElementList(getRandomItems(20));
+autoAdjustmentView.setElementList(ArrayList<Object>);
 autoAdjustmentView.isRemovable(true);
 
 autoAdjustmentView.setAutoAdjustmentLayoutListener(new AutoAdjustmentLayout.IOnAutoAdjustmentLayoutListener() {
@@ -29,6 +29,11 @@ autoAdjustmentView.setAutoAdjustmentLayoutListener(new AutoAdjustmentLayout.IOnA
   To append items dynamically:
   
   ```java
-autoAdjustmentView.addElement(getTextView(156, new Random(), 2));
-autoAdjustmentView.addElementList(getRandomItems(20));
+autoAdjustmentView.addElement(Object);
+autoAdjustmentView.addElementList(ArrayList<Object>);
+ ```
+  To remove item dynamically:
+  
+  ```java
+autoAdjustmentView.removeElement(Object);
  ```

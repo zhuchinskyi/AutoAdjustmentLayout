@@ -10,9 +10,12 @@ autoAdjustmentView.setElementList(getRandomItems(20));
 autoAdjustmentView.setAutoAdjustmentLayoutListener(new AutoAdjustmentLayout.IOnAutoAdjustmentLayoutListener() {
           @Override
           public void onLastItemRemoved(View view) {
+          
           }
+          
           @Override
           public void onItemRemoved(View view) {
+          
           }
         });
   }

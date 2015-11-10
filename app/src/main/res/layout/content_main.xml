@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main">
+
+    <!--<android.support.v7.widget.AppCompatRadioButton-->
+    <!--android:id="@+id/rbFindByUs"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:paddingLeft="8dp"-->
+    <!--android:text="QQQQ" />-->
+
+    <!--<android.support.v7.widget.AppCompatRadioButton-->
+    <!--android:id="@+id/rbFindByUsQ"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/rbFindByUs"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:paddingLeft="20dp"-->
+    <!--android:text="QQQQ" />-->
+
+    <!--&lt;!&ndash;<ToggleButton&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/ToggleButton02"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_alignParentTop="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_gravity="center_horizontal"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_toEndOf="@+id/ToggleButton01"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_toRightOf="@+id/ToggleButton01"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:background="@drawable/toggle_bg_price"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:textColor="@color/toggle_color"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:textOff="Уборка кухни"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:textOn="Уборка кухни"></ToggleButton>&ndash;&gt;-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/ToggleButton01"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<EditText-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="90"-->
+    <!--android:text="21312312" />-->
+
+    <!--<EditText-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="10"-->
+    <!--android:gravity="right|end"-->
+    <!--android:text="m2"></EditText>>-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/llMain"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical">-->
+
+
+    <!--</LinearLayout>-->
+
+    <view
+        android:id="@+id/autoAdjustmentView"
+        class="com.compoundview.autoadjustmentlayout.AutoAdjustmentLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp" />
+
+</LinearLayout>

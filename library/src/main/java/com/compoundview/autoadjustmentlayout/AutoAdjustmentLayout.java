@@ -126,11 +126,16 @@ public class AutoAdjustmentLayout extends LinearLayout {
             int currTvWidth = textView.getMeasuredWidth();  //get mHeight
             int tvHeight = textView.getMeasuredHeight(); //get mWidth
 
+            LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) textView.getLayoutParams();
+            int leftMargin = layoutParams.leftMargin;
+            int rightMargin = layoutParams.rightMargin;
+
+
             LinearLayout ll = (LinearLayout) textView.getParent();
             if (ll != null)
                 ll.removeView(textView);
 
-            if ((currentTextViewSizeInLine + currTvWidth) >= mWidth) {
+            if (mWidth < (currentTextViewSizeInLine + currTvWidth + leftMargin + rightMargin)) {
                 Log.i(TAG, "NEW LINE i: " + i);
                 mTmpLayout = getLinearLayout();
                 addView(mTmpLayout);
@@ -138,7 +143,11 @@ public class AutoAdjustmentLayout extends LinearLayout {
             }
 
             mTmpLayout.addView(textView);
+
+
             currentTextViewSizeInLine += currTvWidth;
+            currentTextViewSizeInLine += (leftMargin + rightMargin);
+
 
             Log.i(TAG, "currentTextViewSizeInLine: " + currentTextViewSizeInLine + ", mWidth: " + mWidth);
         }

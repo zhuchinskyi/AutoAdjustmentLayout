@@ -6,10 +6,13 @@ Android custom view which allows to set a List of Objects (extends of View) that
 
 Features:
 ---
+
 - set/add item(s)
 - remove item dynamically
 - receive callbacks (item has been removed & end achived)
 
+Code:
+---
 
 ```java
 AutoAdjustmentLayout autoAdjustmentView = (AutoAdjustmentLayout) findViewById(R.id.autoAdjustmentView);
@@ -52,11 +55,12 @@ dependencies {
   compile 'compile 'com.github.zhuchinskyi:autoadjustmentlayout:0.0.1'
 }
 ```
+Otherwise, you can download library and append as module to your project.
  
  License
 -------
 
-     Copyright 2015 Denys Zhuchinskyi.
+     Copyright 2015 Denys Zhuchinskyi
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.

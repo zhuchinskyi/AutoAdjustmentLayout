@@ -63,6 +63,16 @@ dependencies {
   compile 'compile 'com.github.zhuchinskyi:autoadjustmentlayout:0.0.1'
 }
 ```
+You may also simply grab [a JAR or an AAR from Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.stanfy.enroscar%22%20a%3A%22enroscar-goro%22).
+Or use it with Maven:
+```xml
+<dependency>
+    <groupId>com.github.zhuchinskyi</groupId>
+    <artifactId>autoadjustmentlayout</artifactId>
+    <version>0.0.1</version>
+</dependency>
+```
+
 Otherwise, you can download library and append as module to your project.
  
  License

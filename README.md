@@ -49,7 +49,7 @@ AutoAdjustmentLayout is an Android library packaged as AAR and available in Mave
 Add this dependency to your Android project in `build.gradle`:
 ```groovy
 dependencies {
-  compile 'compile 'com.github.zhuchinskyi:autoadjustmentlayout:0.0.1''
+  compile 'compile 'com.github.zhuchinskyi:autoadjustmentlayout:0.0.1'
 }
 ```
  

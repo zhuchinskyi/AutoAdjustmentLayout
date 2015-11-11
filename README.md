@@ -57,7 +57,6 @@ autoAdjustmentLayout.removeElement(Object);
 -----
 ![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.stanfy.enroscar/enroscar-goro/badge.svg)
 
-AutoAdjustmentLayout is an Android library packaged as AAR and available in Maven Central.
 Add this dependency to your Android project in `build.gradle`:
 ```groovy
 dependencies {

@@ -17,11 +17,7 @@ Declare in XML:
   <com.compoundview.autoadjustmentlayout.AutoAdjustmentLayout
             android:id="@+id/autoAdjustmentView"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_alignLeft="@+id/textView17"
-            android:layout_alignStart="@+id/textView17"
-            android:layout_below="@+id/textView17" />
+            android:layout_height="wrap_content"/>
 ```
 
 Code:

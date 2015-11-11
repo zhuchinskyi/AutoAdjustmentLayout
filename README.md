@@ -15,7 +15,7 @@ Declare in XML:
 ---
 ```xml
   <com.compoundview.autoadjustmentlayout.AutoAdjustmentLayout
-            android:id="@+id/autoAdjustmentView"
+            android:id="@+id/autoAdjustmentLayout"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"/>
 ```
@@ -24,11 +24,11 @@ Code:
 ---
 
 ```java
-AutoAdjustmentLayout autoAdjustmentView = (AutoAdjustmentLayout) findViewById(R.id.autoAdjustmentView);
-autoAdjustmentView.setElementList(ArrayList<Object>);
-autoAdjustmentView.isRemovable(true);
+AutoAdjustmentLayout autoAdjustmentLayout = (AutoAdjustmentLayout) findViewById(R.id.autoAdjustmentView);
+autoAdjustmentLayout.setElementList(ArrayList<Object>);
+autoAdjustmentLayout.isRemovable(true);
 
-autoAdjustmentView.setAutoAdjustmentLayoutListener(new AutoAdjustmentLayout.IOnAutoAdjustmentLayoutListener() {
+autoAdjustmentLayout.setAutoAdjustmentLayoutListener(new AutoAdjustmentLayout.IOnAutoAdjustmentLayoutListener() {
           @Override
           public void onItemRemoved(View view) {
           
@@ -44,13 +44,13 @@ autoAdjustmentView.setAutoAdjustmentLayoutListener(new AutoAdjustmentLayout.IOnA
   To append items dynamically:
   
   ```java
-autoAdjustmentView.addElement(Object);
-autoAdjustmentView.addElementList(ArrayList<Object>);
+autoAdjustmentLayout.addElement(Object);
+autoAdjustmentLayout.addElementList(ArrayList<Object>);
  ```
   To remove item dynamically:
   
   ```java
-autoAdjustmentView.removeElement(Object);
+autoAdjustmentLayout.removeElement(Object);
  ```
  
  Usage

@@ -50,7 +50,6 @@ public class AutoAdjustmentLayout extends LinearLayout {
      * Set orientation, etc.
      *
      * @param context the current mContext for the view.
-     *
      * @ Calculating height & width of parent layout, then building view.
      * @ Removing on globalLayoutListener after
      */
@@ -130,6 +129,12 @@ public class AutoAdjustmentLayout extends LinearLayout {
             LinearLayout ll = (LinearLayout) textView.getParent();
             if (ll != null)
                 ll.removeView(textView);
+
+            LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) textView.getLayoutParams();
+            int leftMargin = lp.leftMargin;
+            int rightMargin = lp.rightMargin;
+            currentTextViewSizeInLine += (leftMargin + rightMargin);
+
 
             if ((currentTextViewSizeInLine + currTvWidth) >= mWidth) {
                 Log.i(TAG, "NEW LINE i: " + i);

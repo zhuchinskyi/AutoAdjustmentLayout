@@ -130,12 +130,6 @@ public class AutoAdjustmentLayout extends LinearLayout {
             if (ll != null)
                 ll.removeView(textView);
 
-            LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) textView.getLayoutParams();
-            int leftMargin = lp.leftMargin;
-            int rightMargin = lp.rightMargin;
-            currentTextViewSizeInLine += (leftMargin + rightMargin);
-
-
             if ((currentTextViewSizeInLine + currTvWidth) >= mWidth) {
                 Log.i(TAG, "NEW LINE i: " + i);
                 mTmpLayout = getLinearLayout();

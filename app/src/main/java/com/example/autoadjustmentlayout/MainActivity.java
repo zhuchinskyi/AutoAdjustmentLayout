@@ -9,9 +9,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.compoundview.autoadjustmentlayout.AutoAdjustmentLayout;
+import com.compoundview.autoadjustmentlayout.Util;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -71,10 +74,13 @@ public class MainActivity extends AppCompatActivity {
     @NonNull
     private TextView getTextView(int prevTextViewId, Random rnd, int i) {
         final TextView textView = new TextView(this);
-        textView.setPadding(5, 5, 5, 5);
+        int inPxPadding = Util.dpToPx(5);
+        textView.setPadding(inPxPadding, inPxPadding, inPxPadding, inPxPadding);
         textView.setText("Text " + i);
         textView.setTextColor(rnd.nextInt() | 0xff000000);
         int curTextViewId = prevTextViewId + 1;
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, Util.dpToPx(50)));
+        textView.setLayoutParams(lp);
         textView.setId(curTextViewId);
         return textView;
     }

@@ -19,19 +19,13 @@ import java.util.Random;
  */
 public class AutoAdjustmentLayout extends LinearLayout {
 
-    private String TAG = "AutoAdjustmentLayout";
-
     int mWidth;
     int mHeight;
-
     LinearLayout mTmpLayout;
-
     Context mContext;
-
     ArrayList<Object> mElementList;
-
     boolean mIsRemovable = false;
-
+    private String TAG = "AutoAdjustmentLayout";
     private IOnAutoAdjustmentLayoutListener mAutoAdjustmentLayoutListener;
 
 
@@ -219,6 +213,17 @@ public class AutoAdjustmentLayout extends LinearLayout {
         this.mIsRemovable = isRemovable;
     }
 
+    public void setAutoAdjustmentLayoutListener(IOnAutoAdjustmentLayoutListener autoAdjustmentLayoutListener) {
+        this.mAutoAdjustmentLayoutListener = autoAdjustmentLayoutListener;
+    }
+
+    private LinearLayout getLinearLayout() {
+        LinearLayout tmpLayout = new LinearLayout(mContext);
+        tmpLayout.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        tmpLayout.setOrientation(LinearLayout.HORIZONTAL);
+        tmpLayout.setId(new Random().nextInt());
+        return tmpLayout;
+    }
 
     public interface IOnAutoAdjustmentLayoutListener {
         /**
@@ -230,17 +235,5 @@ public class AutoAdjustmentLayout extends LinearLayout {
          * @param view last view which was removed
          */
         void onLastItemRemoved(View view);
-    }
-
-    public void setAutoAdjustmentLayoutListener(IOnAutoAdjustmentLayoutListener autoAdjustmentLayoutListener) {
-        this.mAutoAdjustmentLayoutListener = autoAdjustmentLayoutListener;
-    }
-
-    private LinearLayout getLinearLayout() {
-        LinearLayout tmpLayout = new LinearLayout(mContext);
-        tmpLayout.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-        tmpLayout.setOrientation(LinearLayout.HORIZONTAL);
-        tmpLayout.setId(new Random().nextInt());
-        return tmpLayout;
     }
 }

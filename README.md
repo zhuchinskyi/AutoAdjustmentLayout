@@ -55,6 +55,8 @@ autoAdjustmentLayout.removeElement(Object);
  
  Usage
 -----
+ [ ![Download](https://api.bintray.com/packages/denys-zhuchinsky/maven/AutoAdjustmentLayout/images/download.svg?version=1.1) ](https://bintray.com/denys-zhuchinsky/maven/AutoAdjustmentLayout/1.1/link)
+
  [ ![Download](https://api.bintray.com/packages/denys-zhuchinsky/maven/AutoAdjustmentLayout/images/download.svg) ](https://bintray.com/denys-zhuchinsky/maven/AutoAdjustmentLayout/_latestVersion)
 
 ![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.stanfy.enroscar/enroscar-goro/badge.svg)

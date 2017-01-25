@@ -67,9 +67,10 @@ You may also simply grab [a JAR or an AAR from Maven Central](http://search.mave
 Or use it with Maven:
 ```xml
 <dependency>
-    <groupId>com.github.zhuchinskyi</groupId>
-    <artifactId>autoadjustmentlayout</artifactId>
-    <version>1.2</version>
+  <groupId>com.example.autoadjustmentlayout</groupId>
+  <artifactId>autoadjustmentlayout</artifactId>
+  <version>1.2</version>
+  <type>pom</type>
 </dependency>
 ```
 

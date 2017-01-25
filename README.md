@@ -55,14 +55,12 @@ autoAdjustmentLayout.removeElement(Object);
  
  Usage
 -----
- [ ![Download](https://api.bintray.com/packages/denys-zhuchinsky/maven/AutoAdjustmentLayout/images/download.svg?version=1.1) ](https://bintray.com/denys-zhuchinsky/maven/AutoAdjustmentLayout/1.1/link)
-
 ![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.stanfy.enroscar/enroscar-goro/badge.svg)
 
 Add this dependency to your Android project in `build.gradle`:
 ```groovy
 dependencies {
-  compile 'com.github.zhuchinskyi:autoadjustmentlayout:1.1'
+  compile 'com.github.zhuchinskyi:autoadjustmentlayout:1.2'
 }
 ```
 You may also simply grab [a JAR or an AAR from Maven Central](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22autoadjustmentlayout%22).
@@ -71,7 +69,7 @@ Or use it with Maven:
 <dependency>
     <groupId>com.github.zhuchinskyi</groupId>
     <artifactId>autoadjustmentlayout</artifactId>
-    <version>0.1.1</version>
+    <version>1.2</version>
 </dependency>
 ```
 

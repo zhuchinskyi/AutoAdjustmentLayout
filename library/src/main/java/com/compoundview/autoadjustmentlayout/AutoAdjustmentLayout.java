@@ -14,7 +14,6 @@ import java.util.Random;
 
 /**
  * Compound view to build views with auto adjustment according to views parent layout width
- * <p/>
  * Created by d.zhuchinskiy on 11/6/15.
  */
 public class AutoAdjustmentLayout extends LinearLayout {
@@ -73,7 +72,7 @@ public class AutoAdjustmentLayout extends LinearLayout {
     }
 
     /**
-     * @ Recalculate width and height of view.
+     * Recalculate width and height of view.
      */
     private void updateSizeInfo() {
         mWidth = getWidth();
@@ -82,7 +81,7 @@ public class AutoAdjustmentLayout extends LinearLayout {
     }
 
     /**
-     * @ Building current view according to input and layout params.
+     * Building current view according to input and layout params.
      */
     private void buildView(final ArrayList<Object> items) {
         removeAllViews();
@@ -227,7 +226,7 @@ public class AutoAdjustmentLayout extends LinearLayout {
 
     public interface IOnAutoAdjustmentLayoutListener {
         /**
-         * @ @param view which was removed
+         * @param view which was removed
          */
         void onItemRemoved(View view);
 

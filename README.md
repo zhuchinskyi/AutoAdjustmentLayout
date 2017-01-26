@@ -60,7 +60,7 @@ autoAdjustmentLayout.removeElement(Object);
 Add this dependency to your Android project in `build.gradle`:
 ```groovy
 dependencies {
-  compile 'com.example.autoadjustmentlayout:autoadjustmentlayout:1.2'
+  compile 'com.example.autoadjustmentlayout:autoadjustmentlayout:1.3'
 }
 ```
 You may also simply grab [a JAR or an AAR from Maven Central](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22autoadjustmentlayout%22).
@@ -69,7 +69,7 @@ Or use it with Maven:
 <dependency>
   <groupId>com.example.autoadjustmentlayout</groupId>
   <artifactId>autoadjustmentlayout</artifactId>
-  <version>1.2</version>
+  <version>1.3</version>
   <type>pom</type>
 </dependency>
 ```
